@@ -43,7 +43,7 @@ func (handler *SNMPHandler) Handle(event *dynatrace.ProblemEvent) error {
 		log.Fatalf("Connect() err: %v", err.Error())
 		return nil
 	}
-	defer snmp.Default.Conn.Close()
+	// defer snmp.Default.Conn.Close()
 
 	snmpTrapOID := "1.3.6.1.4.1.31094"
 	sysDescr := "1.3.6.1.2.1.1.1.0"
